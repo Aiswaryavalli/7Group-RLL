@@ -1,0 +1,42 @@
+create database employeepayroll;
+use  employeepayroll;
+
+
+create table admin (id integer not null, email_id varchar(255), password varchar(255), 
+user_name varchar(255), primary key (id)) 
+
+create table attendance (emp_id bigint not null, 
+date varchar(255), status varchar(255), primary key (emp_id)) 
+ 
+create table emplyoee (emp_id integer not null, city varchar(255), 
+designation varchar(255), dob varchar(255), email_id varchar(255),
+f_name varchar(255), gender varchar(255), l_name varchar(255), 
+location varchar(255), mob_no varchar(255), password varchar(255),
+pincode integer not null, state varchar(255), street varchar(255), 
+primary key (emp_id)) 
+ 
+ create table hibernate_sequence (next_val bigint) 
+ insert into hibernate_sequence values ( 1 )
+ 
+ create table leaves (emp_id bigint not null, duration varchar(255), 
+ end_date varchar(255), leave_type varchar(255), start_date varchar(255), 
+ primary key (emp_id)) 
+ 
+ create table salary (sal_id integer not null, basic_pay double precision, 
+ da double precision, deduction double precision, emp_id integer not null,
+ gross_salary double precision, hra double precision, net_pay double precision,
+ pf_amount double precision, tax double precision, tran_date varchar(255), 
+ primary key (sal_id)) 
+ 
+ create table schedule (emp_id bigint not null, date varchar(255), 
+ duration varchar(255), shift varchar(255), end_time varchar(255), 
+ starting_time varchar(255), primary key (emp_id)) 
+ 
+ create table seq (next_val bigint) e
+ insert into seq values ( 10000 )
+ 
+ create table timesheet (emp_id integer not null, break_time varchar(255), 
+ date varchar(255), in_time varchar(255), out_time varchar(255), overtime_hours varchar(255),
+ regular_time varchar(255), total_hours varchar(255), primary key (emp_id))
+***************************************************************************************
+Note:It will automatically create the database queries when we run the backend code
